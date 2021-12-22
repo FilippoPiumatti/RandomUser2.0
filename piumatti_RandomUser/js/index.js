@@ -17,6 +17,15 @@ window.onload = function () {
 	let map = $("#address");
 	let cell = $("#cell");
 	let password = $("#password");
+	let all = $("#chkAll");
+	let uomo = $("#chkUomo");
+	let donna = $("#chkDonna");
+	let nationalities = "";
+	let usa = $("#chkUs");
+	let gbrt = $("#chkBr");
+	let det = $("#chkGer");
+	let brasile = $("#chkIt");
+	let francia = $("#chkFr");
 	
 	current.text("User 1 of " + slider.val())
 	utenti.text("Numero di utenti da generare: " + slider.val())
@@ -28,7 +37,6 @@ window.onload = function () {
 		}else{
 			current.text("User ... of " + slider.val())
 		}
-	
 	})
     let richiesta = inviaRichiesta("GET", "https://randomuser.me/api?results="+ slider.val());   
 	richiesta.done(function (data) {
@@ -85,22 +93,83 @@ window.onload = function () {
 	richiesta.fail(error);
 
 	let btnSubmitRequest = $("#submit");
-
+	all.on("click",function(){
+		donna.prop("checked",false);
+		uomo.prop("checked",false);
+	})
+	donna.on("click",function(){
+		all.prop("checked",false);
+		uomo.prop("checked",false);
+	})
+	uomo.on("click",function(){
+		all.prop("checked",false);
+		donna.prop("checked",false);
+	})
 	btnSubmitRequest.on("click",function(){
-		let all = $("#chkAll");
-		let uomo = $("#chkUomo");
-		let donna = $("#chkDonna");
+		 all = $("#chkAll");
+		 uomo = $("#chkUomo");
+		 donna = $("#chkDonna");
+		 genderStr= "";
 
-		if (all.is(":checked")) {
+		if (all.prop("checked")) {
 			genderStr = "";
-		}else if(donna.is(":checked")== true){
+		}else if(donna.prop("checked")){
 			genderStr += "female"; 
-		}else if(uomo.is(":checked")==true){
+		}else if(uomo.prop("checked")){
 			genderStr += "male";
 		}
 
-		let richiesta = inviaRichiesta("GET", "https://randomuser.me/api?results="+ slider.val()+"?gender=" + genderStr);   
+		usa = $("#chkUs");
+	    gbrt = $("#chkBr");
+	    det = $("#chkGer");
+	    brasile = $("#chkIt");
+	    francia = $("#chkFr");
+		nationalities = "";
+		if (usa.prop("checked")) {
+			if (nationalities!="") {
+				nationalities += ",us"
+			}else{
+				nationalities += "us"
+			}
+			
+		}
+		if (francia.prop("checked")) {
+			if (nationalities!="") {
+				nationalities += ",fr"
+			}else{
+				nationalities += "fr"
+			}
+			
+		}
+		if (brasile.prop("checked")) {
+			if (nationalities!="") {
+				nationalities += ",br"
+			}else{
+				nationalities += "br"
+			}
+			
+		}
+		if (det.prop("checked")) {
+			if (nationalities!="") {
+				nationalities += ",de"
+			}else{
+				nationalities += "de"
+			}
+			
+		}
+		if (gbrt.prop("checked")) {
+			if (nationalities!="") {
+				nationalities += ",gb"
+			}else{
+				nationalities += "gb"
+			}
+			
+		}
 
+		let richiesta = inviaRichiesta("GET", "https://randomuser.me/api?results="+ slider.val()+"&gender=" + genderStr + "&nat=" + nationalities);   
+		let str = "https://randomuser.me/api?results="+ slider.val()+"&gender=" + genderStr;
+		let str2 ="https://randomuser.me/api?results="+ slider.val()+"&gender=" + genderStr + "&nat=" + nationalities;
+		console.log(str2);
 		richiesta.done(function (data) {
 			let Users = data.results;
 			console.log(Users)
