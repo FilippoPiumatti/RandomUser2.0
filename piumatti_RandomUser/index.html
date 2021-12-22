@@ -11,16 +11,24 @@
 	</head>
 	<body>
 		<div id="wrapperHead">
-			<h1 align="center">Random User Generator</h1>
-			<p align="center">a free API service provided by <a href="https://randomuser.me/"> RandomUser.me</a></p>
-			<h5 id ="lblUtenti" align="center"> Numero di utenti Generati: </h5>
-			<p align="center">Generare almeno un utente! </p>
-			<div class="slidecontainer">
-				<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-			  </div>
+		
+			<div id ="contTitle">
+				<h1 align="center">Random User Generator</h1>
+				<p align="center">a free API service provided by <a href="https://randomuser.me/"> RandomUser.me</a></p>
+			</div>
+			<blockquote></blockquote>
+			<div id="generazione">
+				<h5 id ="lblUtenti" align="center"> Numero di utenti che vuoi generare: </h5>
+				<p align="center">Generare almeno un utente! </p>
+				<div class="slidecontainer">
+					<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+				  </div>
+			</div>
+			<blockquote></blockquote>
+			
 			<div id="filtro">
 				<p id=" titleFilter"align="center">DATI COMUNI DA INSERIRE PER FILTRARE LA RICERCA</p>
-				<p id="pGender"align="center"> -Genere: </p>
+				<p id="pGender"align="center"> Genere: </p>
 				<div id="myGender">
 					<label for="chkUomo"> UOMO</label>
 					<input type="checkbox" id="chkUomo"/>
@@ -29,7 +37,7 @@
 					<label for="chkAll"> ENTRAMBI</label>
 					<input type="checkbox" id ="chkAll"/>
 				</div>
-				<p id ="myP"align="center"> -Nazionalita: </p>
+				<p id ="myP"align="center"> Nazionalità: </p>
 				<div id="myCheckbox">
 					<label for="chkIt"> IT</label>
 					<input type="checkbox" id="chkIt"/>
@@ -52,21 +60,40 @@
 	<div id="container">
 		<div id="wrapperBody">
 			<div id="immagine">
-
+				<img id="currentImg">
+			</div>
+			<div id="myRows">
+				<div id="hi">
+					<p id ="currentName"align center>Hi! My name is: <br>...... ........</p>
+				</div>
+			</div>
+			<div id="frecciaDx">
+				<img id="frDx" src="img/frecciaDestra.png">
+			</div>
+			
+		
+			<div id="frecciaSx">
+				<img id="frSx"src="img/frecciaSinistra.png">
 			</div>
 			<ul id="wrapper">
-				<li> </li>
-				<li> </li>
-				<li> </li>
-				<li> </li>
-				<li> </li>
-				<li> </li>
+				<li id="nome"> </li>
+				<li id="email"> </li>
+				<li id="dataNasc"> </li>
+				<li id="address"> </li>
+				<li id="cell"> </li>
+				<li id="password"> </li>
 			</ul>
 		</div>
-	</div>
-	<div id="riempi">
-		
-	</div>
+		<p id="currentUser" align="center"> User ... of ...</p>
+	<blockquote></blockquote>
+	<footer id="riempi" align="center">all the rights are reserved to the <A href="https//:randomuser.me">randomuser.me </A>
+	<br>
+	this is only a simulation using the <A href="https//:randomuser.me">randomuser.me</A> API's services and only for school purpose
+	<BR>
+	if you have any type of issue with the functionality of this program dont esitate to contact me writing me an e-mail at frezyforbusiness@gmail.com	
+	<Br> before that i recommend to check the status of the API's services guaranteed by <A href="https//:randomuser.me">randomuser.me </A>
+	<br> i wish you had a good experience
+	</footer>
 
 	
 	</body>
