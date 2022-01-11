@@ -1,0 +1,243 @@
+*{
+	font-family: ink Free;
+}
+html{
+	background-color: lightblue;
+}
+h1{
+	padding:10px;
+}
+#frecciaDx{
+	cursor: pointer;
+}
+#frecciaSx{
+	cursor: pointer;
+}
+#wrapper{
+	width: 550px;
+	margin: 0 auto;
+}
+#wrapper li{
+	cursor:pointer;
+	display:block;
+	width:40px;
+	height:48px;
+	float:left;
+	margin:20px;
+	background-image:url(../img/card_icons.png);  /* 756 x 192 */
+
+	/* riscalatura dell'immagine, che diventa /* 378 x 96  */
+	background-size:378px;
+
+	/* traslo l'immagine di 48 pixel in alto in modo da visualizzare la 2° fila*/
+	/* in realtà non serve a nulla in quanto la posizione verrà stabilita per ogni singolo li */
+	/* background-position-y:-48px; */
+
+	transition:all .25s ease-out;
+}
+#wrapperHead{
+	/*border: 3px solid black;
+	border-radius: 20px;*/ 
+	height: 600px;
+	background-color: lightblue;
+}
+#wrapperBody{
+	bottom: 20px;
+	width: 580px;
+	margin: 0px auto;
+	padding-top: 20px;
+	border: 3px solid lightseagreen;
+	height: 370px;
+	border-radius: 20px;
+	background-color: lightseagreen;
+}
+#myCheckbox{
+	width: 220px;
+	margin: 0 auto;
+	padding-bottom:10px ;
+
+}
+#filtro{
+	padding-top: 10px;
+	width: 450px;
+	height: 275px;
+	border: 3px solid lightseagreen;
+	border-radius: 20px ;
+	margin: 0px auto;
+	background-color: lightseagreen;
+}
+#submit{
+	width: 100px;
+	margin: 0px auto;
+}
+#myButton{
+	width:100px;
+	margin: 0px auto;
+}
+p{
+
+	padding-left: 5px;
+	font-weight: bold;
+}
+#myP{
+	padding-top:10px ;
+	font-weight: bold;
+}
+#pGender{
+	font-weight: bold;
+	padding-top: 5px;
+}
+#myGender{
+	width: 250px;
+	margin: 0 auto;
+}
+#container{
+	background-color: lightblue;
+}
+#immagine{
+	width: 130px;
+	height: 130px;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+#riempi{
+	width: 100%;
+	height: 205px;
+	background-color: lightblue;
+
+}
+#tableT{
+	background-color: lightblue;
+}
+#contTitle{
+	border: 1px solid lightblue;
+	border-radius:20px ;
+	width: 500px;
+	margin: 0px auto;
+}
+#generazione{
+	padding-top:20px ;
+	border: 3px solid lightskyblue;
+	border-radius:20px ;
+	width: 300px;
+	margin: 0px auto;
+}
+#frecciaSx{
+	
+	width: 125px;
+	height: 50px;
+	src: url("img/frecciaDestra.jpg");
+}
+#frecciaDx{
+
+	width: 125px;
+	height: 50px;
+	float: right;
+	src: url("img/frecciaDestra.jpg");
+}
+#titleFilter{
+	padding-top: 20px;
+
+}
+#hi{
+	width: 350px;
+	font-size:  18pt;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 5px;
+}
+#frDx{
+	float: left;
+	background-color: lightseagreen;
+}
+#frSx{
+	float: right;
+}
+#wrapper li:nth-of-type(1)
+{background-position:0 -48px}
+
+#wrapper li:nth-of-type(2)
+{background-position:-68px -48px}
+
+#wrapper li:nth-of-type(3)
+{background-position:-135px -48px}
+
+#wrapper li:nth-of-type(4)
+{background-position:-203px -48px}
+
+#wrapper li:nth-of-type(5)
+{background-position:-270px -48px}
+
+#wrapper li:nth-of-type(6)
+{background-position:-338px -48px}
+
+
+/* ********************************************* */
+#wrapper li:nth-of-type(1):hover
+{background-position:0 -96px}
+
+#wrapper li:nth-of-type(2):hover
+{background-position:-68px -96px}
+
+#wrapper li:nth-of-type(3):hover
+{background-position:-135px -96px}
+
+#wrapper li:nth-of-type(4):hover
+{background-position:-203px -96px}
+
+#wrapper li:nth-of-type(5):hover
+{background-position:-270px -96px}
+
+#wrapper li:nth-of-type(6):hover
+{background-position:-338px -96px}
+
+.slidecontainer {
+	width: 155px; /* Width of the outside container */
+	height: 25;
+	margin: 0px auto;
+	padding-bottom: 10px;
+  }
+  
+  /* The slider itself */
+  .slider {
+	-webkit-appearance: none;  /* Override default CSS styles */
+	appearance: none;
+	width: 150px; /* Full-width */
+	height: 5px; /* Specified height */
+	border: 1px solid gray;
+	border-radius: 30px;
+	background: black; /* Grey background */
+	outline: none; /* Remove outline */
+	opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+	-webkit-transition: .2s; /* 0.2 seconds transition on hover */
+	transition: opacity .2s;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+	opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	width: 10px; /* Set a specific slider handle width */
+	height: 10px; /* Slider handle height */
+	background: #04AA6D; /* Green background */
+	cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+	width: 10px; /* Set a specific slider handle width */
+	height: 10px; /* Slider handle height */
+	background: #04AA6D; /* Green background */
+	cursor: pointer; /* Cursor on hover */
+  }
+
+  html {
+	font-size: 1rem;
+  }
+  
+ 

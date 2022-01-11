@@ -1,0 +1,39 @@
+Aprendo l'immagine con Paint si vede che ha dimensione 756 x 192.
+backgroud-size la riscala a 378 x 96
+
+Per cui ognuna delle 6 immagini avrà larghezza = 378/6 = 63 px
+									 altezza 96/2 = 48 px
+									 
+In realtà osservando le icone con inspector / elements, si vede che hanno dimensione 40 x 48.
+Quindi in orizzontale tra una immagine e l'altra c'è uno spazio di 23 px
+
+All'interno del file style.css si vede che lo stile applicato agli LI delle immagini è il seguente:
+
+li{
+	cursor:pointer;
+	display:block;
+	width:40px;
+	height:48px;
+	float:left;
+	margin:20px;
+	background-image:url(../img/card_icons.png);
+	background-size:378px;
+	background-position-y:-48px;
+	transition:all .25s ease-out
+}
+
+Ogni singola immagine presenta poi i seguenti offset:
+{background-position:0 -96px}
+{background-position:-68px -96px}
+{background-position:-135px -96px}
+{background-position:-203px -96px}
+{background-position:-270px -96px}
+{background-position:-338px -96px}  -> 406
+ delta x = 68, 67, 68, 67, 68
+ 
+{background-position:0 -48px}
+{background-position:-68px -48px}
+{background-position:-135px -48px}
+{background-position:-203px -48px}
+{background-position:-270px -48px}
+{background-position:-338px -48px}

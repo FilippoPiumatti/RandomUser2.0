@@ -1,0 +1,113 @@
+<!doctype  html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8"/>
+	    <title> </title>
+		<link rel="stylesheet" href="css/index.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css"/>
+	<script type="application/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+		<script src="js/libreria.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+	<body>
+		<div id="wrapperHead">
+		
+			<div id ="contTitle">
+				<h1 align="center">Random User Generator</h1>
+				<p align="center">a free API service provided by <a href="https://randomuser.me/"> RandomUser.me</a></p>
+			</div>
+			<blockquote></blockquote>
+			<div id="generazione">
+				<h5 id ="lblUtenti" align="center"> Numero di utenti che vuoi generare: </h5>
+				<p align="center">Generare almeno un utente! </p>
+				<div class="slidecontainer">
+					<input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+				  </div>
+			</div>
+			<blockquote></blockquote>
+			
+			<div id="filtro">
+				<p id=" titleFilter"align="center">DATI COMUNI DA INSERIRE PER FILTRARE LA RICERCA</p>
+				<p id="pGender"align="center"> Genere: </p>
+				<div id="myGender">
+					<label for="chkUomo"> UOMO</label>
+					<input type="radio" id="chkUomo"/>
+					<label for="chkDonna"> DONNA</label>
+					<input type="radio" id="chkDonna"/>
+					<label for="chkAll"> ENTRAMBI</label>
+					<input type="radio" id ="chkAll" checked=true/>
+				</div>
+				<p id ="myP"align="center"> Nazionalità: </p>
+				<div id="myCheckbox">
+					<label for="chkIt"> BR</label>
+					<input type="checkbox" id="chkIt"/>
+					<label for="chkGer"> GER</label>
+					<input type="checkbox" id="chkGer"/>
+					<label for="chkFr"> FR</label>
+					<input type="checkbox" id ="chkFr"/>
+					<label for="chkUs"> US</label>
+					<input type="checkbox" id ="chkUs"/>
+					<label for="chkbr"> EN</label>
+					<input type="checkbox" id="chkBr"/>
+				</div>
+				<div id="myButton">
+					<button id="submit">Genera!</button>
+				</div>
+			
+			</div>
+			
+		</div>
+	<div id="container">
+		<div id="wrapperBody">
+			<div id="immagine">
+				<img id="currentImg">
+			</div>
+			<div id="myRows">
+				<div id="hi">
+					<p id ="currentName"align center>Hi! My name is: <br>...... ........</p>
+				</div>
+			</div>
+			<div id="frecciaDx">
+				<img id="frDx" src="img/frecciaDestra.png">
+			</div>
+			
+		
+			<div id="frecciaSx">
+				<img id="frSx"src="img/frecciaSinistra.png">
+			</div>
+			<ul id="wrapper">
+				<li id="nome"> </li>
+				<li id="email"> </li>
+				<li id="dataNasc"> </li>
+				<li id="address"> </li>
+				<li id="cell"> </li>
+				<li id="password"> </li>
+			</ul>
+		</div>
+		<p id="currentUser" align="center"> User ... of ...</p>
+	<blockquote></blockquote>
+	<footer id="riempi" align="center">
+	<div id="wrapper">
+	<table id="tableT">
+		<thead>
+			<tr>
+				<th width="20%"> name </th>
+				<th width="20%"> code </th>
+				<th width="20%"> country </th>
+				<th width="20%"> state </th>
+				<th width="20%"> cell </th>
+				<th width="20%"> img </th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	</div>
+	
+	</footer>
+
+	
+	</body>
+</html>
